@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+ main()
+{
+    char setor;
+    printf("Cadastro de vagas\n");
+    printf("A-administrativo\n");
+    printf("B-balconista\n");
+    printf("C-Contabil\n");
+    scanf("%c",&setor);
+    
+    if (setor=='A'|| setor=='a') {
+    	
+  	printf("Voce aplicou no setor A");
+	  
+	} else if (setor=='B'|| setor=='b' ) {
+
+    printf ("Voce aplicou no setor B");	
+    		
+	} else if(setor=='C'|| setor=='c'){
+		
+		printf("Voce aplicou no setor C");
+		
+	}else{
+		
+		printf("ERRO!!");
+	} 
+	
+	
+	
+	
+	return 0;
+}
