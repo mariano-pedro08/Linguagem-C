@@ -4,12 +4,12 @@
 #include <unistd.h>
  main()
 {
-    char nome[50],cpf[15],endereco[50], email[50];
-	int telefone, opcoes ,cor, modelo;
+    char nome_cliente[50],nome_carro[50],cpf[15],endereco[50], email[50];
+	int telefone, opcoes ,cor, modelo, contador_carro=0, opcao=1;
 	float salario;
 	
 	printf("Digite seu nome:");
-	fgets(nome,50,stdin);
+	fgets(nome_cliente,50,stdin);
 	printf("Digite seu CPF: ");
 	scanf("%s",&cpf);
 	printf("Digite seu endereço:");
@@ -19,19 +19,19 @@
 	scanf("%s",&email);
 	printf("Digite seu telefone:");
 	scanf("%i",&telefone);
-	printf("Digite o salario");
+	printf("Digite o salario:R$");
 	scanf("%f",&salario);
 	
-	printf("Voce vai querer um carro  novo ou usado?");
-	printf(" 1-novo ou 2-seminovo");
+	printf("Voce vai querer um carro  novo ou usado?\n");
+	printf(" 1 - novo  2 - seminovo \n");
 	scanf("%i",&opcoes);
 	
 	
 	if( opcoes==1){
 		
-		printf("Voce selecionou o novo");
+		printf("Voce selecionou o novo\n");
 	}else {
-		printf("Se não vc escolheu o seminovo");
+		printf("Se não vc escolheu o seminovo\n");
 	}
 	
 	printf("Escolha a cor do seu carro\n");
@@ -62,8 +62,8 @@
 			
 	}
 	
-    printf("Escolha o modelo do carro\n");
-    printf("1-escolheu a fiat 2-escolheu  a volkswagen, 3- escolheu a hyundai 4-escolheu  a  chevrolet 5-Nissan\n");
+    printf("Escolha o modelo do carro \n");
+    printf("1-fiat 2-volkswagen, 3-hyundai 4-chevrolet 5-Nissan\n");
     scanf("%d",&modelo);
     
     	switch(modelo){
@@ -87,8 +87,36 @@
 			
 			default:
 				printf("Não escolheu nenhuma opcao apresentada, contate o suporte  ");
-	
+
 }
+      
+
+	while(opcao==1){
+		
+		printf("Digite o nome do carro que vc deseja");
+		scanf("%s",&nome_carro);
+		
+		 printf("1- continuar ou 0 sair ");
+       scanf("%d",&opcao);
+		
+	}
+		
+    printf("Aqui está o modelo de sua preferencia");
+	
+	
+	system("cls");
+	
+	//IMPRESSAO
+	printf("Nome do cliente:%s\n",nome_cliente);
+	printf("cpf:%s\n",cpf);
+    printf("email: %s \n",email);
+    printf("telefone:%i \n",telefone);
+	printf("cor: %i \n",cor);
+	printf("modelo: %i \n",modelo);
+	printf("nome do carro:%s\n",nome_carro);
+	printf("salario:%.2f\n",salario);
+	
+	
 	
 	
 	
